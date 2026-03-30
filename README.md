@@ -15,15 +15,15 @@ Skills trong repo này tập trung vào các workflow Vue/Nuxt thực tế (comp
 
 Repo này tương thích với `npx skills add`.
 
-- Cài từ GitHub repo: `npx skills add <owner>/<repo>`
-- Cài từ URL đầy đủ: `npx skills add https://github.com/<owner>/<repo>`
+- Cài từ GitHub repo: `npx skills add nguyentrongnghia2001/vue-skills`
+- Cài từ URL đầy đủ: `npx skills add https://github.com/nguyentrongnghia2001/vue-skills`
 - Cài từ local path: `npx skills add ./vue-skills`
 
 Ví dụ hữu ích:
 
-- Liệt kê skill: `npx skills add <owner>/<repo> --list`
-- Cài skill cụ thể: `npx skills add <owner>/<repo> --skill review-vue-performance`
-- Cài cho agent cụ thể: `npx skills add <owner>/<repo> -a github-copilot`
+- Liệt kê skill: `npx skills add nguyentrongnghia2001/vue-skills --list`
+- Cài skill cụ thể: `npx skills add nguyentrongnghia2001/vue-skills --skill review-vue-performance`
+- Cài cho agent cụ thể: `npx skills add nguyentrongnghia2001/vue-skills -a github-copilot`
 
 ## Skill discovery compatibility
 
