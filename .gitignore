@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Logs & temp
+*.log
+*.tmp
+*.swp
+
+# Node/Python common
+node_modules/
+__pycache__/
