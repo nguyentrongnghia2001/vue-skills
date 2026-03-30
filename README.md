@@ -9,7 +9,7 @@ Mỗi skill là một thư mục chứa `SKILL.md` với YAML frontmatter:
 - `name`: định danh skill (kebab-case)
 - `description`: mô tả ngắn, nêu rõ khi nào nên dùng
 
-Skills trong repo này tập trung vào các workflow Vue/Nuxt thực tế: composable, Pinia, performance, clean-code, debug Sentry, v.v.
+Skills trong repo này tập trung vào các workflow Vue/Nuxt thực tế (composable, Pinia, performance, clean-code, debug Sentry, v.v.) cũng như Vue core development (compiler, reactivity, types organization).
 
 ## Install a skill
 
@@ -44,6 +44,8 @@ Ngoài ra repo có thể dùng thêm `examples/`, `templates/`, `verification/` 
 
 ## Current skills
 
+### Vue/Nuxt Application Development
+
 - `create-api-composable`
 - `debug-sentry-error`
 - `extract-composable`
@@ -57,6 +59,12 @@ Ngoài ra repo có thể dùng thêm `examples/`, `templates/`, `verification/` 
 - `scaffold-nuxt-component`
 - `scaffold-pinia-store`
 - `write-enterprise-proposal`
+
+### Vue Core Library Development
+
+- `review-vue-core-compiler` - Review compiler code (AST, transforms, code generation)
+- `review-reactivity-patterns` - Review reactivity API patterns, tracking, proxy handlers
+- `organize-vue-types` - Organize TypeScript type exports for core packages
 
 ## Create a new skill
 
