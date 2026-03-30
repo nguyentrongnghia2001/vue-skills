@@ -5,6 +5,7 @@ Cảm ơn bạn đã đóng góp cho kho skill 🎯
 ## Goal
 
 Giữ repo theo chuẩn Agent Skills để dễ dùng với `npx skills add` và tương thích nhiều agent.
+Focus vào Vue application best practices dựa trên real patterns từ vuejs/core issues.
 
 ## Required conventions
 

@@ -4,7 +4,7 @@ Repository-level guidance for contributors and coding agents.
 
 ## Scope
 
-This repository contains reusable Agent Skills for Vue/Nuxt workflows.
+This repository contains reusable Agent Skills for Vue/Nuxt application development and best practices.
 
 - Canonical skill location: `skills/`
 - Each skill must include `SKILL.md` with valid YAML frontmatter.

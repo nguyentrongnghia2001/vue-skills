@@ -60,11 +60,11 @@ Ngoài ra repo có thể dùng thêm `examples/`, `templates/`, `verification/` 
 - `scaffold-pinia-store`
 - `write-enterprise-proposal`
 
-### Vue Core Library Development
+### Vue Application Best Practices
 
-- `review-vue-core-compiler` - Review compiler code (AST, transforms, code generation)
-- `review-reactivity-patterns` - Review reactivity API patterns, tracking, proxy handlers
-- `organize-vue-types` - Organize TypeScript type exports for core packages
+- `review-vue-templates` - Review template code (v-if, v-for, slots, transitions) for performance & memory safety
+- `optimize-vue-reactivity` - Optimize reactivity patterns (watch cleanup, memory leaks, array mutations)
+- `structure-vue-types` - Structure component TypeScript types (props, emits, slots) to avoid TS slowness
 
 ## Create a new skill
 
