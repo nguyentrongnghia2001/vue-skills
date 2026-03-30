@@ -9,12 +9,14 @@ if ($SkillName -notmatch '^[a-z0-9]+(-[a-z0-9]+)*$') {
 }
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
-$skillDir = Join-Path $repoRoot ".agents/skills/$SkillName"
+$skillDir = Join-Path $repoRoot "skills/$SkillName"
 
+New-Item -ItemType Directory -Force -Path (Join-Path $skillDir "scripts") | Out-Null
+New-Item -ItemType Directory -Force -Path (Join-Path $skillDir "references") | Out-Null
+New-Item -ItemType Directory -Force -Path (Join-Path $skillDir "assets") | Out-Null
 New-Item -ItemType Directory -Force -Path (Join-Path $skillDir "examples") | Out-Null
 New-Item -ItemType Directory -Force -Path (Join-Path $skillDir "templates") | Out-Null
 New-Item -ItemType Directory -Force -Path (Join-Path $skillDir "verification") | Out-Null
-New-Item -ItemType Directory -Force -Path (Join-Path $skillDir "scripts") | Out-Null
 
 $skillMdPath = Join-Path $skillDir "SKILL.md"
 if (-not (Test-Path $skillMdPath)) {

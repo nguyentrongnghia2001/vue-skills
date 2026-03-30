@@ -1,22 +1,48 @@
-# Vue Skills Best Practices
+# Vue Agent Skills
 
-Kho này chứa bộ **agent skills** cho Vue 3 / Nuxt 3 để team dùng lại thống nhất theo best practice.
+Bộ skill best-practices cho Vue 3 / Nuxt 3, thiết kế theo hướng tương thích hệ sinh thái **Agent Skills** (như `vercel-labs/skills`).
 
-## Mục tiêu
+## What is this?
 
-- Chuẩn hóa cách làm việc với AI agent trong dự án Vue/Nuxt.
-- Giảm lặp lại prompt thủ công bằng skill tái sử dụng.
-- Giữ cấu trúc rõ ràng để mọi người dễ clone, học, và mở rộng.
+Mỗi skill là một thư mục chứa `SKILL.md` với YAML frontmatter:
 
-## Cấu trúc repo
+- `name`: định danh skill (kebab-case)
+- `description`: mô tả ngắn, nêu rõ khi nào nên dùng
 
-- `.agents/skills/<skill-name>/SKILL.md`: định nghĩa chính của skill.
-- `.agents/skills/<skill-name>/examples/`: ví dụ input/output.
-- `.agents/skills/<skill-name>/templates/`: template dùng lại.
-- `.agents/skills/<skill-name>/verification/`: checklist/tiêu chí kiểm tra.
-- `.agents/skills/<skill-name>/scripts/`: script hỗ trợ riêng cho skill.
+Skills trong repo này tập trung vào các workflow Vue/Nuxt thực tế: composable, Pinia, performance, clean-code, debug Sentry, v.v.
 
-## Danh sách skill hiện có
+## Install a skill
+
+Repo này tương thích với `npx skills add`.
+
+- Cài từ GitHub repo: `npx skills add <owner>/<repo>`
+- Cài từ URL đầy đủ: `npx skills add https://github.com/<owner>/<repo>`
+- Cài từ local path: `npx skills add ./vue-skills`
+
+Ví dụ hữu ích:
+
+- Liệt kê skill: `npx skills add <owner>/<repo> --list`
+- Cài skill cụ thể: `npx skills add <owner>/<repo> --skill review-vue-performance`
+- Cài cho agent cụ thể: `npx skills add <owner>/<repo> -a github-copilot`
+
+## Skill discovery compatibility
+
+Theo chuẩn `skills` CLI, skill có thể được discover ở nhiều path. Repo này đặt skills tại:
+
+- `skills/`
+
+Path này tương thích tốt với Copilot/Codex/Cursor và nhiều agent khác trong hệ Agent Skills.
+
+## Repository structure
+
+- `skills/<skill-name>/SKILL.md` (required)
+- `skills/<skill-name>/scripts/` (optional)
+- `skills/<skill-name>/references/` (optional)
+- `skills/<skill-name>/assets/` (optional)
+
+Ngoài ra repo có thể dùng thêm `examples/`, `templates/`, `verification/` cho mục đích tài liệu nội bộ.
+
+## Current skills
 
 - `create-api-composable`
 - `debug-sentry-error`
@@ -32,37 +58,20 @@ Kho này chứa bộ **agent skills** cho Vue 3 / Nuxt 3 để team dùng lại 
 - `scaffold-pinia-store`
 - `write-enterprise-proposal`
 
-## Cách sử dụng
+## Create a new skill
 
-### 1) Clone repo
+- Bash: `scripts/new-skill.sh <skill-name>`
+- PowerShell: `scripts/new-skill.ps1 -SkillName <skill-name>`
 
-Clone repo này về máy, mở bằng VS Code, rồi chọn skill phù hợp trong `.agents/skills/`.
+Hoặc dùng CLI chung:
 
-### 2) Dùng skill trong dự án khác
+- `npx skills init <skill-name>`
 
-Có 2 cách phổ biến:
+## Contributing
 
-- Copy skill cần dùng từ repo này sang thư mục `.agents/skills/` của dự án đích.
-- Hoặc thêm repo này làm submodule/subtree để cập nhật tập trung.
-
-### 3) Tạo skill mới
-
-- Bash (macOS/Linux/Git Bash): chạy `scripts/new-skill.sh <skill-name>`
-- PowerShell (Windows): chạy `scripts/new-skill.ps1 -SkillName <skill-name>`
-
-Skill name phải theo `kebab-case` (ví dụ: `review-auth-flow`).
-
-## Nguyên tắc chất lượng
-
-- Mỗi skill phải có frontmatter (`name`, `description`).
-- Mục `Use When` phải rõ phạm vi sử dụng.
-- Có tiêu chí kiểm tra tối thiểu trong `verification/` nếu skill phức tạp.
-- Không hard-code đường dẫn máy cá nhân trong script.
-
-## Đóng góp
-
-Xem hướng dẫn tại `CONTRIBUTING.md`.
+Xem `CONTRIBUTING.md` để theo đúng spec + checklist.
 
 ## License
 
 MIT — xem `LICENSE`.
+  

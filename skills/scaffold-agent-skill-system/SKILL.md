@@ -9,7 +9,7 @@ Tạo sẵn bộ khung (scaffolding) cho một skill agent, bao gồm các thư 
 
 ## Use When
 - Bắt đầu tạo mới một process / agent skill
-- Muốn duy trì chuẩn cấu trúc `.agents/skills` cho cả team
+- Muốn duy trì chuẩn cấu trúc `skills` cho cả team
 - Mỗi khi thấy một tác vụ lặp dài và muốn chuyển nó thành skill.
 
 ## Required Inputs
@@ -17,7 +17,7 @@ Tạo sẵn bộ khung (scaffolding) cho một skill agent, bao gồm các thư 
 - Mục đích ngắn gọn của skill
 
 ## Expected Output
-- Thư mục skill được tạo tại `.agents/skills/<skill-name>`
+- Thư mục skill được tạo tại `skills/<skill-name>`
 - Các thư mục: examples, templates, verification, scripts
 - File SKILL.md có sẵn format chuẩn với thông tin đã cung cấp.
 

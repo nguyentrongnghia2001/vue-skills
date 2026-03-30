@@ -9,4 +9,4 @@ fi
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-bash "$REPO_ROOT/.agents/skills/scaffold-agent-skill-system/scripts/scaffold.sh" "$1"
+bash "$REPO_ROOT/skills/scaffold-agent-skill-system/scripts/scaffold.sh" "$1"

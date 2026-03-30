@@ -7,7 +7,7 @@ set -euo pipefail
 
 if [ -z "${1:-}" ]; then
   echo "Vui lòng truyền tên skill."
-  echo "Cách dùng: bash .agents/skills/scaffold-agent-skill-system/scripts/scaffold.sh my-new-skill"
+  echo "Cách dùng: bash skills/scaffold-agent-skill-system/scripts/scaffold.sh my-new-skill"
   exit 1
 fi
 
@@ -21,12 +21,13 @@ fi
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../../../.." && pwd)"
-SKILL_DIR="$REPO_ROOT/.agents/skills/$SKILL_NAME"
+SKILL_DIR="$REPO_ROOT/skills/$SKILL_NAME"
 
 echo "Đang tạo cấu trúc cho skill: $SKILL_NAME"
 echo "Thư mục đích: $SKILL_DIR"
 
-mkdir -p "$SKILL_DIR/examples" "$SKILL_DIR/templates" "$SKILL_DIR/verification" "$SKILL_DIR/scripts"
+mkdir -p "$SKILL_DIR/scripts" "$SKILL_DIR/references" "$SKILL_DIR/assets"
+mkdir -p "$SKILL_DIR/examples" "$SKILL_DIR/templates" "$SKILL_DIR/verification"
 
 if [ ! -f "$SKILL_DIR/SKILL.md" ]; then
   cat <<EOF > "$SKILL_DIR/SKILL.md"
